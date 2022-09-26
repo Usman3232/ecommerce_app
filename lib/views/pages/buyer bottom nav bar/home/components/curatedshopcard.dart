@@ -1,8 +1,6 @@
 import 'package:ecommerce_app/constants/colors.dart';
 import 'package:ecommerce_app/constants/height.dart';
 import 'package:ecommerce_app/constants/icons.dart';
-
-
 import 'package:ecommerce_app/constants/width.dart';
 import 'package:ecommerce_app/utils/size_config.dart';
 import 'package:ecommerce_app/views/widgets/TextView.dart';
@@ -113,10 +111,10 @@ class _CuratedShopCardState extends State<CuratedShopCard> {
                 width: SizeConfig.widthMultiplier * 1.6,
               ),
               TextView(
-                text: widget.reviews.toString() + "( Reviews)",
+                text: "(" + widget.reviews.toString() + " Reviews)",
                 fontWeight: FontWeight.w400,
                 size: SizeConfig.textMultiplier * 1.4,
-                color: Color(0xff7E7C7C),
+                color: Color(0xffB7B7B7),
               ),
             ],
           )

@@ -1,4 +1,3 @@
-
 import 'package:ecommerce_app/models/homemodels/curatedshopmodel.dart';
 import 'package:ecommerce_app/utils/size_config.dart';
 import 'package:ecommerce_app/views/pages/buyer%20bottom%20nav%20bar/home/components/curatedshopcard.dart';
@@ -19,7 +18,7 @@ class TrendingSection extends StatelessWidget {
         itemCount: curatedshop_model.length,
         scrollDirection: Axis.horizontal,
         shrinkWrap: true,
-        physics: BouncingScrollPhysics(),
+        physics: const BouncingScrollPhysics(),
         itemBuilder: (context, index) {
           return Padding(
             padding: EdgeInsets.only(left: SizeConfig.widthMultiplier * 6.13),

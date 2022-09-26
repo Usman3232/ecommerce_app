@@ -1,9 +1,6 @@
 import 'package:ecommerce_app/constants/colors.dart';
 import 'package:ecommerce_app/constants/icons.dart';
 import 'package:ecommerce_app/constants/images.dart';
-
-
-
 import 'package:ecommerce_app/controllers/button_controller.dart';
 import 'package:ecommerce_app/utils/root.dart';
 import 'package:ecommerce_app/utils/size_config.dart';
@@ -120,14 +117,14 @@ class LoginPage extends StatelessWidget {
                               TextSpan(
                                   text: 'Dont have an Account?',
                                   style: TextStyle(
-                                      fontSize: SizeConfig.textMultiplier * 1.8,
+                                      fontSize: SizeConfig.textMultiplier * 1.9,
                                       fontWeight: FontWeight.w400,
-                                      color: Colors.black38)),
+                                      color: Color(0xff6F6F6F))),
                               TextSpan(
                                   text: ' Create Now',
                                   style: TextStyle(
-                                      fontSize: SizeConfig.textMultiplier * 1.8,
-                                      fontWeight: FontWeight.w400,
+                                      fontSize: SizeConfig.textMultiplier * 1.9,
+                                      fontWeight: FontWeight.w500,
                                       color: const Color(0xff425D81))),
                             ],
                           ),
@@ -151,7 +148,7 @@ class LoginPage extends StatelessWidget {
                         title: "LOGIN",
                         textcolour: Colors.white,
                         fontWeight: FontWeight.w600,
-                        fontSize: SizeConfig.textMultiplier * 1.65,
+                        fontSize: SizeConfig.textMultiplier * 1.8,
                       ),
                       SizedBox(
                         height: SizeConfig.heightMultiplier * 2,

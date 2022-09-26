@@ -1,7 +1,6 @@
 import 'package:ecommerce_app/constants/colors.dart';
 import 'package:ecommerce_app/constants/height.dart';
 import 'package:ecommerce_app/constants/icons.dart';
-
 import 'package:ecommerce_app/models/live_tracking_model/carousel_model.dart';
 import 'package:ecommerce_app/utils/size_config.dart';
 import 'package:ecommerce_app/views/pages/buyer%20bottom%20nav%20bar/home/components/anytime_seller_section.dart';
@@ -13,7 +12,6 @@ import 'package:ecommerce_app/views/pages/buyer%20bottom%20nav%20bar/home/compon
 import 'package:ecommerce_app/views/pages/buyer%20bottom%20nav%20bar/home/components/special_for_you_section.dart';
 import 'package:ecommerce_app/views/pages/buyer%20bottom%20nav%20bar/home/components/stories.dart';
 import 'package:ecommerce_app/views/pages/buyer%20bottom%20nav%20bar/home/components/trending_section.dart';
-
 import 'package:ecommerce_app/views/pages/stores/stores.dart';
 import 'package:ecommerce_app/views/widgets/TextView.dart';
 import 'package:ecommerce_app/views/widgets/sectiontitleandseeall.dart';
@@ -86,12 +84,12 @@ class _HomePageState extends State<HomePage> {
         ],
       ),
       body: SingleChildScrollView(
-        physics: BouncingScrollPhysics(),
+        physics: const BouncingScrollPhysics(),
         child: SizedBox(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Stories(),
+              const Stories(),
               Padding(
                 padding: EdgeInsets.symmetric(
                     horizontal: SizeConfig.widthMultiplier * 4.55),
@@ -117,7 +115,7 @@ class _HomePageState extends State<HomePage> {
                   ],
                 ),
               ),
-              CategoriesSection(),
+              const CategoriesSection(),
               Padding(
                 padding: EdgeInsets.symmetric(
                     horizontal: SizeConfig.widthMultiplier * 4.55),
@@ -127,7 +125,7 @@ class _HomePageState extends State<HomePage> {
                     SizedBox(
                       height: SizeConfig.heightMultiplier * 5.1,
                     ),
-                    MyPoints(),
+                    const MyPoints(),
                     SizedBox(height: AppHeights.height35),
                     TextView(
                       text: "Curated Stores",

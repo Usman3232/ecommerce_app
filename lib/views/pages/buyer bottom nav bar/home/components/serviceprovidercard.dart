@@ -1,8 +1,6 @@
 import 'package:ecommerce_app/constants/colors.dart';
 import 'package:ecommerce_app/constants/height.dart';
 import 'package:ecommerce_app/constants/icons.dart';
-
-
 import 'package:ecommerce_app/constants/width.dart';
 import 'package:ecommerce_app/utils/size_config.dart';
 import 'package:ecommerce_app/views/widgets/TextView.dart';
@@ -41,12 +39,14 @@ class _ServiceProviderCardState extends State<ServiceProviderCard> {
             // width: AppWidths.width150,
             width: SizeConfig.widthMultiplier * 39.5,
             decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(20),
+              borderRadius: BorderRadius.circular(10),
               image: DecorationImage(
                   image: AssetImage(widget.image), fit: BoxFit.cover),
             ),
             child: Padding(
-              padding: EdgeInsets.only(bottom: 10, left: 10),
+              padding: EdgeInsets.only(
+                  bottom: SizeConfig.heightMultiplier * 1,
+                  left: SizeConfig.widthMultiplier * 2.4),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 mainAxisAlignment: MainAxisAlignment.end,
@@ -54,7 +54,7 @@ class _ServiceProviderCardState extends State<ServiceProviderCard> {
                   TextView(
                     text: widget.title,
                     fontWeight: FontWeight.w600,
-                    size: SizeConfig.textMultiplier * 1.65,
+                    size: SizeConfig.textMultiplier * 1.6,
                     color: Colors.white,
                   ),
                   Row(
@@ -65,7 +65,7 @@ class _ServiceProviderCardState extends State<ServiceProviderCard> {
                       ),
                       TextView(
                         text: widget.rating.toString(),
-                        size: SizeConfig.textMultiplier * 1.65,
+                        size: SizeConfig.textMultiplier * 1.5,
                         fontWeight: FontWeight.w600,
                         color: Colors.white,
                       ),
@@ -73,8 +73,8 @@ class _ServiceProviderCardState extends State<ServiceProviderCard> {
                         width: SizeConfig.widthMultiplier * 1.6,
                       ),
                       TextView(
-                        text: widget.reviews.toString() + "( Reviews)",
-                        size: SizeConfig.textMultiplier * 1.65,
+                        text: "(" + widget.reviews.toString() + " Reviews)",
+                        size: SizeConfig.textMultiplier * 1.5,
                         fontWeight: FontWeight.w400,
                         color: Color(0xffE9E8E8),
                       ),

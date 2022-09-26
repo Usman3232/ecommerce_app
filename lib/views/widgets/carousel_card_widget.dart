@@ -1,9 +1,6 @@
-
-
 import 'package:ecommerce_app/utils/size_config.dart';
 import 'package:ecommerce_app/views/widgets/TextView.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 class CarouselCard extends StatefulWidget {
   final String image;
@@ -48,28 +45,25 @@ class _CarouselCardState extends State<CarouselCard> {
                 height: SizeConfig.heightMultiplier * 10,
               ),
               Container(
-                decoration: BoxDecoration(
-                    color: const Color(0xff52BD94),
-                    borderRadius: BorderRadius.circular(
-                        SizeConfig.widthMultiplier * 1.75)),
-                child: Padding(
-                    padding: EdgeInsets.symmetric(
-                        horizontal: SizeConfig.widthMultiplier * 2.3,
-                        vertical: SizeConfig.heightMultiplier * 0.3),
-                    child: TextView(
-                      text: "NEW",
-                      fontWeight: FontWeight.w600,
-                      size: SizeConfig.textMultiplier * 1.53,
-                      color: Colors.white,
-                    )),
-              ),
+                  padding: EdgeInsets.symmetric(
+                      horizontal: SizeConfig.widthMultiplier * 1.8,
+                      vertical: SizeConfig.heightMultiplier * 0.2),
+                  decoration: BoxDecoration(
+                      color: const Color(0xff52BD94),
+                      borderRadius: BorderRadius.circular(8)),
+                  child: TextView(
+                    text: "NEW",
+                    fontWeight: FontWeight.w600,
+                    size: SizeConfig.textMultiplier * 1.53,
+                    color: Colors.white,
+                  )),
               SizedBox(
                 height: SizeConfig.heightMultiplier * 1,
               ),
               TextView(
                 text: widget.title,
                 fontWeight: FontWeight.w600,
-                size: SizeConfig.textMultiplier * 2.55,
+                size: SizeConfig.textMultiplier * 2.5,
                 color: widget.titleColor,
               ),
               SizedBox(

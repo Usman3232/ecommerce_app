@@ -1,6 +1,4 @@
 import 'package:ecommerce_app/constants/height.dart';
-
-
 import 'package:ecommerce_app/models/homemodels/anytimesellermodel.dart';
 import 'package:ecommerce_app/utils/size_config.dart';
 import 'package:ecommerce_app/views/pages/buyer%20bottom%20nav%20bar/home/components/anytimesellercard.dart';
@@ -60,7 +58,7 @@ class AnyTimeSellerSection extends StatelessWidget {
                 child: ListView.builder(
                   itemCount: anytimeseller_model.length,
                   scrollDirection: Axis.horizontal,
-                  physics: BouncingScrollPhysics(),
+                  physics: const BouncingScrollPhysics(),
                   shrinkWrap: true,
                   itemBuilder: (context, index) {
                     return Padding(
@@ -79,7 +77,7 @@ class AnyTimeSellerSection extends StatelessWidget {
                             isstore: "isanytime",
                           ));
                         },
-                        islocation: true,
+                        islocation: false,
                       ),
                     );
                   },

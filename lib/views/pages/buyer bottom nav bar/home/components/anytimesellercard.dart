@@ -1,7 +1,6 @@
 import 'package:ecommerce_app/constants/colors.dart';
 import 'package:ecommerce_app/constants/height.dart';
 import 'package:ecommerce_app/constants/icons.dart';
-
 import 'package:ecommerce_app/constants/width.dart';
 import 'package:ecommerce_app/utils/size_config.dart';
 import 'package:ecommerce_app/views/widgets/TextView.dart';
@@ -101,7 +100,7 @@ class _AnyTimeSellerCardState extends State<AnyTimeSellerCard> {
                     children: [
                       TextView(
                         text: widget.title,
-                        size: SizeConfig.textMultiplier * 2.04,
+                        size: SizeConfig.textMultiplier * 1.9,
                         fontWeight: FontWeight.w500,
                       ),
                       Spacer(),
@@ -109,7 +108,7 @@ class _AnyTimeSellerCardState extends State<AnyTimeSellerCard> {
                           ? Container(
                               height: 22.5,
                               width: 22.5,
-                              decoration: BoxDecoration(
+                              decoration: const BoxDecoration(
                                   shape: BoxShape.circle,
                                   color: Color(0xffEAEFF6)),
                               child: Icon(
@@ -118,7 +117,7 @@ class _AnyTimeSellerCardState extends State<AnyTimeSellerCard> {
                                 size: SizeConfig.imageSizeMultiplier * 4,
                               ),
                             )
-                          : SizedBox()
+                          : const SizedBox()
                     ],
                   ),
                   SizedBox(
@@ -148,12 +147,12 @@ class _AnyTimeSellerCardState extends State<AnyTimeSellerCard> {
                         width: SizeConfig.widthMultiplier * 1.6,
                       ),
                       TextView(
-                        text: widget.reviews.toString() + "( Reviews)",
+                        text: "(" + widget.reviews.toString() + " Reviews)",
                         size: SizeConfig.textMultiplier * 1.65,
                         fontWeight: FontWeight.w400,
-                        color: Color(0xff7E7C7C),
+                        color: const Color(0xff7E7C7C),
                       ),
-                      Spacer(),
+                      const Spacer(),
                       RichText(
                         text: TextSpan(
                           children: <TextSpan>[

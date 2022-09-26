@@ -36,7 +36,7 @@ class NewAdds extends StatelessWidget {
               count: pages.length,
               effect: ExpandingDotsEffect(
                 activeDotColor: Colors.black,
-                dotHeight: SizeConfig.heightMultiplier * 0.4,
+                dotHeight: SizeConfig.heightMultiplier * 0.33,
                 dotWidth: SizeConfig.widthMultiplier * 1.5,
               ),
             ),
