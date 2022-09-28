@@ -1,6 +1,5 @@
 import 'package:ecommerce_app/constants/colors.dart';
 import 'package:ecommerce_app/constants/height.dart';
-
 import 'package:ecommerce_app/constants/width.dart';
 import 'package:ecommerce_app/utils/size_config.dart';
 import 'package:ecommerce_app/views/widgets/TextView.dart';
@@ -39,7 +38,7 @@ class _CategoriesCardState extends State<CategoriesCard> {
                 shape: BoxShape.circle,
                 color: widget.onpressed
                     ? AppColors.primarylightColor
-                    : Color(0xffF1F4F9)),
+                    : const Color(0xffF1F4F9)),
             child: Padding(
               padding: EdgeInsets.all(SizeConfig.widthMultiplier * 2.5),
               child: SvgPicture.asset(

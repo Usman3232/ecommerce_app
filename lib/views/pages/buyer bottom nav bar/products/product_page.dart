@@ -8,11 +8,9 @@ import 'package:ecommerce_app/views/pages/stores/stores.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
-
 import '../../../../constants/colors.dart';
 import '../../../../constants/height.dart';
 import '../../../../constants/icons.dart';
-
 import '../../../../utils/size_config.dart';
 import '../../../widgets/TextView.dart';
 import '../../../widgets/carousel_card_widget.dart';

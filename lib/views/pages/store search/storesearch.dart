@@ -1,9 +1,6 @@
 import 'package:ecommerce_app/constants/colors.dart';
 import 'package:ecommerce_app/constants/height.dart';
 import 'package:ecommerce_app/constants/icons.dart';
-
-
-
 import 'package:ecommerce_app/constants/width.dart';
 import 'package:ecommerce_app/utils/size_config.dart';
 import 'package:ecommerce_app/views/widgets/TextView.dart';
@@ -53,8 +50,8 @@ class _StoreSearchState extends State<StoreSearch> {
           Row(
             children: [
               Padding(
-                padding:
-                    EdgeInsets.symmetric(horizontal: SizeConfig.widthMultiplier * 3.9),
+                padding: EdgeInsets.symmetric(
+                    horizontal: SizeConfig.widthMultiplier * 3.9),
                 child: InkWell(
                     onTap: () {
                       Get.back();
@@ -65,8 +62,8 @@ class _StoreSearchState extends State<StoreSearch> {
                   child:
                       AuthTextInputField(hintText: "Search a curated store")),
               Padding(
-                padding:
-                    EdgeInsets.symmetric(horizontal: SizeConfig.widthMultiplier * 3.9),
+                padding: EdgeInsets.symmetric(
+                    horizontal: SizeConfig.widthMultiplier * 3.9),
                 child: GestureDetector(
                     onTap: () {
                       showModalBottomSheet(
@@ -81,8 +78,7 @@ class _StoreSearchState extends State<StoreSearch> {
                                 decoration: BoxDecoration(
                                     color: Color(0xffF8F8F8),
                                     borderRadius: BorderRadius.vertical(
-                                        top: Radius.circular(
-                                            30))),
+                                        top: Radius.circular(30))),
                                 child: StatefulBuilder(builder:
                                     (BuildContext context,
                                         StateSetter setState) {
@@ -92,9 +88,12 @@ class _StoreSearchState extends State<StoreSearch> {
                                     children: [
                                       Padding(
                                         padding: EdgeInsets.only(
-                                            left: SizeConfig.widthMultiplier * 6.13,
-                                            right: SizeConfig.widthMultiplier * 6.13,
-                                            top: SizeConfig.widthMultiplier * 6.13),
+                                            left: SizeConfig.widthMultiplier *
+                                                6.13,
+                                            right: SizeConfig.widthMultiplier *
+                                                6.13,
+                                            top: SizeConfig.widthMultiplier *
+                                                6.13),
                                         child: Column(
                                           mainAxisAlignment:
                                               MainAxisAlignment.start,
@@ -104,7 +103,8 @@ class _StoreSearchState extends State<StoreSearch> {
                                             TextView(
                                               text: "Filters",
                                               fontWeight: FontWeight.w600,
-                                              size: SizeConfig.textMultiplier * 2.4,
+                                              size: SizeConfig.textMultiplier *
+                                                  2.4,
                                             ),
                                             SizedBox(
                                               height: AppHeights.height14,
@@ -112,7 +112,8 @@ class _StoreSearchState extends State<StoreSearch> {
                                             TextView(
                                               text: "Price Range",
                                               fontWeight: FontWeight.w600,
-                                              size: SizeConfig.textMultiplier * 2.04,
+                                              size: SizeConfig.textMultiplier *
+                                                  2.04,
                                             ),
                                             Container(
                                               margin: EdgeInsets.only(
@@ -155,14 +156,18 @@ class _StoreSearchState extends State<StoreSearch> {
                                               children: [
                                                 TextView(
                                                   text: "₹0",
-                                                  size: SizeConfig.textMultiplier * 1.53,
+                                                  size: SizeConfig
+                                                          .textMultiplier *
+                                                      1.53,
                                                   fontWeight: FontWeight.w600,
                                                   color: Color(0xffAAAAAA),
                                                 ),
                                                 Spacer(),
                                                 TextView(
                                                   text: "₹9,750",
-                                                  size: SizeConfig.textMultiplier * 1.53,
+                                                  size: SizeConfig
+                                                          .textMultiplier *
+                                                      1.53,
                                                   fontWeight: FontWeight.w600,
                                                   color: Color(0xffAAAAAA),
                                                 ),
@@ -176,7 +181,8 @@ class _StoreSearchState extends State<StoreSearch> {
                                             TextView(
                                               text: "Sort By",
                                               fontWeight: FontWeight.w600,
-                                              size: SizeConfig.textMultiplier * 2.04,
+                                              size: SizeConfig.textMultiplier *
+                                                  2.04,
                                             ),
                                             SizedBox(
                                               height: AppHeights.height20,
@@ -375,12 +381,12 @@ class _StoreSearchState extends State<StoreSearch> {
                                         decoration: BoxDecoration(
                                             color: Colors.white,
                                             borderRadius: BorderRadius.vertical(
-                                                top: Radius.circular(
-                                                    30))),
+                                                top: Radius.circular(30))),
                                         child: Padding(
                                           padding: EdgeInsets.symmetric(
                                               horizontal:
-                                                  SizeConfig.widthMultiplier * 6.13),
+                                                  SizeConfig.widthMultiplier *
+                                                      6.13),
                                           child: Row(
                                             mainAxisAlignment:
                                                 MainAxisAlignment.spaceBetween,

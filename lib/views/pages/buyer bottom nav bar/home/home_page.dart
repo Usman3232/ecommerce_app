@@ -146,7 +146,7 @@ class _HomePageState extends State<HomePage> {
                   ],
                 ),
               ),
-              TrendingSection(),
+              const TrendingSection(),
               SizedBox(
                 height: AppHeights.height21,
               ),
@@ -163,8 +163,8 @@ class _HomePageState extends State<HomePage> {
               SizedBox(
                 height: AppHeights.height18,
               ),
-              SpecialForYouSection(),
-              AnyTimeSellerSection(),
+              const SpecialForYouSection(),
+              const AnyTimeSellerSection(),
               SizedBox(
                 height: AppHeights.height25,
               ),
@@ -181,7 +181,7 @@ class _HomePageState extends State<HomePage> {
               SizedBox(
                 height: AppHeights.height21,
               ),
-              ServiceProviderSection(),
+              const ServiceProviderSection(),
               SizedBox(
                 height: SizeConfig.heightMultiplier * 20,
               )

@@ -1,18 +1,12 @@
 import 'dart:typed_data';
 import 'dart:ui' as ui;
 import 'package:custom_info_window/custom_info_window.dart';
-import 'package:ecommerce_app/constants/colors.dart';
-import 'package:ecommerce_app/constants/height.dart';
-import 'package:ecommerce_app/constants/icons.dart';
-import 'package:ecommerce_app/constants/width.dart';
 import 'package:ecommerce_app/utils/size_config.dart';
-import 'package:ecommerce_app/views/widgets/TextView.dart';
-import 'package:ecommerce_app/views/widgets/custom_text_button.dart';
+import 'package:ecommerce_app/views/bottom%20sheets/distance_filter.dart';
 import 'package:ecommerce_app/views/widgets/search_widget.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter_svg/svg.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 
@@ -27,11 +21,7 @@ class _MapLocationPageState extends State<MapLocationPage> {
   final CustomInfoWindowController _customInfoWindowController =
       CustomInfoWindowController();
   final LatLng _latLng = const LatLng(28.3933, 70.3328);
-  int value = 0;
-  bool isfocus = false;
-  bool isfocus2 = false;
-  bool isfocus3 = false;
-  bool isfocus4 = false;
+
   final double _zoom = 19.0;
   final Set<Marker> _markers = {};
   String images = 'assets/images/marker.png';
@@ -268,168 +258,16 @@ class _MapLocationPageState extends State<MapLocationPage> {
                       ),
                     ),
                   ),
-                  SearchWidget(),
+                  const SearchWidget(),
                   GestureDetector(
                     onTap: () {
                       showModalBottomSheet(
                           isScrollControlled: true,
-                          shape: RoundedRectangleBorder(
+                          shape: const RoundedRectangleBorder(
                               borderRadius: BorderRadius.vertical(
                                   top: Radius.circular(30))),
                           context: context,
-                          builder: (_) => Container(
-                                height: SizeConfig.heightMultiplier * 44.5,
-                                decoration: BoxDecoration(
-                                    color: const Color(0xffF8F8F8),
-                                    borderRadius: BorderRadius.vertical(
-                                        top: Radius.circular(30))),
-                                child: StatefulBuilder(builder:
-                                    (BuildContext context,
-                                        StateSetter setState) {
-                                  return Column(
-                                    children: [
-                                      Padding(
-                                        padding: EdgeInsets.only(
-                                            left: SizeConfig.widthMultiplier *
-                                                6.13,
-                                            right: SizeConfig.widthMultiplier *
-                                                6.13,
-                                            top: SizeConfig.widthMultiplier *
-                                                6.13),
-                                        child: Column(
-                                          mainAxisAlignment:
-                                              MainAxisAlignment.start,
-                                          crossAxisAlignment:
-                                              CrossAxisAlignment.start,
-                                          children: [
-                                            TextView(
-                                              text: "Filters",
-                                              fontWeight: FontWeight.w600,
-                                              size: SizeConfig.textMultiplier *
-                                                  2.4,
-                                            ),
-                                            SizedBox(
-                                              height: AppHeights.height23,
-                                            ),
-                                            Row(
-                                              children: [
-                                                TextView(
-                                                  text: "Distance",
-                                                  fontWeight: FontWeight.w600,
-                                                  size: SizeConfig
-                                                          .textMultiplier *
-                                                      2.04,
-                                                ),
-                                                Spacer(),
-                                                InkWell(
-                                                    onTap: () {
-                                                      setState(() {
-                                                        if (value == 0) {
-                                                          value = value;
-                                                        } else
-                                                          value = value - 1;
-                                                      });
-                                                    },
-                                                    child: SvgPicture.asset(
-                                                        AppIcons.minuscircle)),
-                                                SizedBox(
-                                                  width: SizeConfig
-                                                          .widthMultiplier *
-                                                      2,
-                                                ),
-                                                TextView(
-                                                  text:
-                                                      value.toString() + " km",
-                                                  color: AppColors.textColor,
-                                                  fontWeight: FontWeight.w600,
-                                                  size: SizeConfig
-                                                          .textMultiplier *
-                                                      1.8,
-                                                ),
-                                                SizedBox(
-                                                  width: SizeConfig
-                                                          .widthMultiplier *
-                                                      2,
-                                                ),
-                                                InkWell(
-                                                    onTap: () {
-                                                      setState(() {
-                                                        value = value + 1;
-                                                      });
-                                                    },
-                                                    child: SvgPicture.asset(
-                                                        AppIcons.addcircle)),
-                                              ],
-                                            ),
-                                            SizedBox(
-                                              height: AppHeights.height25,
-                                            ),
-                                            TextView(
-                                              text: "Type",
-                                              fontWeight: FontWeight.w600,
-                                              size: SizeConfig.textMultiplier *
-                                                  2.04,
-                                            ),
-                                            SizedBox(
-                                              height: AppHeights.height20,
-                                            )
-                                          ],
-                                        ),
-                                      ),
-                                      SingleChildScrollView(
-                                        scrollDirection: Axis.horizontal,
-                                        physics: const BouncingScrollPhysics(),
-                                        child: Row(
-                                          children: [],
-                                        ),
-                                      ),
-                                      const Spacer(),
-                                      Container(
-                                        height: AppHeights.height50 * 2,
-                                        decoration: BoxDecoration(
-                                            color: Colors.white,
-                                            borderRadius: BorderRadius.vertical(
-                                                top: Radius.circular(30))),
-                                        child: Padding(
-                                          padding: EdgeInsets.symmetric(
-                                              horizontal:
-                                                  SizeConfig.widthMultiplier *
-                                                      6.13),
-                                          child: Row(
-                                            mainAxisAlignment:
-                                                MainAxisAlignment.spaceBetween,
-                                            children: [
-                                              CustomTextButton(
-                                                callback: () {
-                                                  setState(() {
-                                                    value = 0;
-                                                  });
-                                                },
-                                                radius: 90,
-                                                height: AppHeights.height50,
-                                                width: AppWidths.width150,
-                                                colour: Colors.white,
-                                                title: "Reset (4)",
-                                                textcolour: Colors.black,
-                                              ),
-                                              CustomTextButton(
-                                                callback: () {},
-                                                radius: 90,
-                                                height: AppHeights.height50,
-                                                width: AppWidths.width150,
-                                                colour:
-                                                    AppColors.primarylightColor,
-                                                title: "Apply",
-                                                textcolour: Colors.white,
-                                              ),
-                                            ],
-                                          ),
-                                        ),
-                                      )
-                                    ],
-                                  );
-                                }),
-                              ));
+                          builder: (_) => const DistenceFilter());
                     },
                     child: Container(
                       height: SizeConfig.heightMultiplier * 10,

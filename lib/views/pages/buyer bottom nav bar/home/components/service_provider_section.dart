@@ -1,5 +1,4 @@
 import 'package:ecommerce_app/constants/height.dart';
-
 import 'package:ecommerce_app/models/homemodels/serviceprovidermodel.dart';
 import 'package:ecommerce_app/utils/size_config.dart';
 import 'package:ecommerce_app/views/pages/buyer%20bottom%20nav%20bar/home/components/serviceprovidercard.dart';
@@ -20,7 +19,7 @@ class ServiceProviderSection extends StatelessWidget {
         itemCount: homeserviceprovider_model.length,
         scrollDirection: Axis.horizontal,
         shrinkWrap: true,
-        physics: BouncingScrollPhysics(),
+        physics: const BouncingScrollPhysics(),
         itemBuilder: (context, index) {
           return Padding(
             padding: EdgeInsets.only(left: SizeConfig.widthMultiplier * 4.55),

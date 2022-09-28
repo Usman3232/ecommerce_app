@@ -10,7 +10,7 @@ class CuratedCategoriesModel {
 List<CuratedCategoriesModel> curatedcategories_model = [
   CuratedCategoriesModel(
     image: "assets/icons/food.svg",
-    title: "food",
+    title: "Food",
   ),
   CuratedCategoriesModel(
     image: "assets/icons/clover.svg",
