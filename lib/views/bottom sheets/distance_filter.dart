@@ -122,7 +122,7 @@ class _DistenceFilterState extends State<DistenceFilter> {
                             decoration: BoxDecoration(
                                 color: selectedtype == index
                                     ? AppColors.primarylightColor
-                                    : Colors.white,
+                                    : Colors.transparent,
                                 borderRadius: BorderRadius.circular(30),
                                 border: Border.all(color: Colors.black12)),
                             padding: EdgeInsets.symmetric(
@@ -131,7 +131,7 @@ class _DistenceFilterState extends State<DistenceFilter> {
                             duration: const Duration(milliseconds: 200),
                             child: TextView(
                               text: types[index],
-                              size: SizeConfig.textMultiplier * 1.8,
+                              size: SizeConfig.textMultiplier * 1.9,
                               fontWeight: FontWeight.w600,
                               color: selectedtype == index
                                   ? Colors.white
